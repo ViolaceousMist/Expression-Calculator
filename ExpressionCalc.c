@@ -4,10 +4,26 @@
 #include <stdlib.h>
 #include <string.h>
 
+typedef enum{
+    OP_ADD = '+',
+    OP_SUBTRACT = '-',
+    OP_MULTIPLY = '*',
+    OP_DIVIDE = '/'
+}Operator;
+
+
+
+struct token{
+
+
+};
+
+
+
 char *userInput(){
     printf("Input Expression \n");
-    char *input = malloc(sizeof *input * 100);
-    int inputLimit = 0;
+    int inputLimit = 100;
+    char *input = malloc(sizeof *input * inputLimit);
 
     if(input == NULL){
         printf("Error. Memory allocation returns NULL. \n");
@@ -23,5 +39,6 @@ char *userInput(){
 
     return input;
 }
+
 
 int main(void){return 0;}
