@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <stdbool.h>
 
 typedef enum{
     OP_ADD = '+',
@@ -11,14 +12,11 @@ typedef enum{
     OP_DIVIDE = '/'
 }Operator;
 
-
-
 struct token{
-
-
+    bool isNum;
+    double num;
+    Operator op;
 };
-
-
 
 char *userInput(){
     printf("Input Expression \n");
